@@ -15,11 +15,25 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+   // @IBOutlet weak var textbox: UILabel!
+    @IBAction func Zoom(_ sender: UIPinchGestureRecognizer) {
+        print("Zooming In")
     }
-
-
+    
+    @IBAction func Exzoom(_ sender: UIPinchGestureRecognizer) {
+        print("Zooming Out")
+    }
+    @IBAction func Forward(_ sender: UIPanGestureRecognizer) {
+        print("Moving Forward")
+    }
+    @IBAction func Backward(_ sender: UIPanGestureRecognizer) {
+        print("Moving Backward")
+    }
+    @IBAction func Left(_ sender: UIPanGestureRecognizer) {
+        print("Moving Left")
+    }
+    @IBAction func Right(_ sender: UIPanGestureRecognizer) {
+        print("Moving Right")
+    }
 }
 
