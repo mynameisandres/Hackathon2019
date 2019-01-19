@@ -22,19 +22,24 @@ class ViewController: UIViewController {
     @IBAction func Exzoom(_ sender: UIPinchGestureRecognizer) {
         print("Zooming Out")
     }
-    @IBAction func Forward(_ sender: UIPanGestureRecognizer) {
-        print("Moving Forward")
-    }
-    @IBAction func Backward(_ sender: UIPanGestureRecognizer) {
-        print("Moving Backward")
-    }
-    @IBAction func Left(_ sender: UIPanGestureRecognizer) {
-        print("Moving Left")
-    }
-    @IBAction func Right(_ sender: UIPanGestureRecognizer) {
-        print("Moving Right")
-    }
 
+    //Handles the swiping for the app
+    
+    func addSwipe() {
+        let directions: [UISwipeGestureRecognizerDirection] = [.right, .left, .up, .down]
+        for direction in directions {
+            let gesture = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipe:"))
+            gesture.direction = direction
+            self.view.addGestureRecognizer(gesture);
+        }
+    }
+    
+    func handleSwipe(sender: UISwipeGestureRecognizer) {
+        print(sender.direction)
+    }
+    
+    //End of my code for adding swipes
+    
     @objc func handlePinch(sender: UIPinchGestureRecognizer) {
         guard sender.view != nil else { return }
         
