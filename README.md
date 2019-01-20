@@ -2,8 +2,7 @@
 Repository for our hackathon project.
 
 
-//Code for UDP
-https://stackoverflow.com/questions/28295486/how-to-implement-udp-client-and-send-data-in-swift-on-iphone 
+https://github.com/dbaldwin/DronePan-Android
 
 Group Members:
 
